@@ -5,7 +5,7 @@ on:
     branches:
       - 'main'
   schedule:
-    - cron: '0 0 * * *' # Once per day at midnight UTC
+    - cron: '0 0 1 * *'
 
 jobs:
   docker:
@@ -33,4 +33,5 @@ jobs:
           context: .
           platforms: linux/amd64
           push: true
-          tags: franciscodockers/docker-virt-manager-plus:latest, franciscodockers/docker-virt-manager-plus:build-$(date)
+          tags: franciscodockers/docker-virt-manager-plus:latest, franciscodockers/docker-virt-manager-plus:build-{{ env.BUILD_TIMESTAMP }} 
+
