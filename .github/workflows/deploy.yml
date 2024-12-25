@@ -11,6 +11,9 @@ jobs:
   docker:
     runs-on: ubuntu-latest
     steps:
+      - 
+      name: Generate Timestamp
+      run: echo "::set-output name=timestamp::$(date +%Y%m%d-%H%M%S)"
       -
         name: Checkout
         uses: actions/checkout@v2
@@ -27,11 +30,14 @@ jobs:
           username: ${{ secrets.DOCKER_ADM_NAME }}
           password: ${{ secrets.DOCKER_ADM_PASS }}
       -
-        name: Build and push+
+        name: Build and push
         uses: docker/build-push-action@v2
         with:
           context: .
-          platforms: linux/amd64
+          platforms: linux/amd64,linux/arm64
           push: true
-          tags: franciscodockers/docker-virt-manager-plus:latest, franciscodockers/docker-virt-manager-plus:build-{{ env.BUILD_TIMESTAMP }} 
+          tags:
+            - franciscodockers/docker-virt-manager-plus:latest
+            - "franciscodockers/docker-virt-manager-plus:build-"  # Concatenate string with output variable
+              <<: ${{ steps.GenerateTimestamp.outputs.timestamp }}
 
