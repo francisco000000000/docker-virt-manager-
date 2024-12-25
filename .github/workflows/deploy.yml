@@ -33,6 +33,4 @@ jobs:
           context: .
           platforms: linux/amd64
           push: true
-          tags:
-            - franciscodockers/docker-virt-manager-plus:latest
-            - franciscodockers/docker-virt-manager-plus:build-$(date)
+          tags: franciscodockers/docker-virt-manager-plus:latest, franciscodockers/docker-virt-manager-plus:build-$(date)
