@@ -25,7 +25,7 @@ Se o docker e libvirt estiverem no mesmo host
 ```yaml
 services: 
   virt-manager:
-    image: mber5/virt-manager:latest
+    image: franciscodockers/docker-virt-manager-plus:latest
     restart: always
     ports:
       - 8185:80
@@ -52,7 +52,7 @@ Se o docker e libvirt estiverem em hosts diferentes
 ```yaml
 services: 
   virt-manager:
-    image: mber5/virt-manager:latest
+    image: franciscodockers/docker-virt-manager-plus:latest
     restart: always
     ports:
       - 8185:80
