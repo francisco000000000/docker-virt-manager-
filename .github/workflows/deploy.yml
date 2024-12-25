@@ -35,4 +35,4 @@ jobs:
           push: true
           tags:
           - franciscodockers/docker-virt-manager-plus:latest
-          - franciscodockers/docker-virt-manager-plus:build-$(date +%Y%m%d-%H%M%S)
+          - franciscodockers/docker-virt-manager-plus:build-$(date)
