@@ -1,4 +1,4 @@
-[![](https://github.com/m-bers/docker-virt-manager/workflows/docker%20build/badge.svg)](https://github.com/m-bers/docker-virt-manager/actions/workflows/deploy.yml)[![](https://img.shields.io/docker/pulls/mber5/virt-manager)](https://hub.docker.com/r/mber5/virt-manager)
+![Docker Pulls](https://img.shields.io/docker/pulls/franciscodockers/docker-virt-manager-plus?link=https%3A%2F%2Fgithub.com%2Ffrancisco000000000%2Fdocker-virt-manager-%2F) ![GitHub last commit](https://img.shields.io/github/last-commit/francisco000000000/docker-virt-manager-) ![GitHub Created At](https://img.shields.io/github/created-at/francisco000000000/docker-virt-manager-) ![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/francisco000000000/docker-virt-manager-/deploy.yml)
 # Docker virt-manager
 ### Interface de usuário da web GTK Broadway para libvirt
 ![Docker virt-manager](docker-virt-manager.gif)
